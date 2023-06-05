@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.agile.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_akun"
+        android:name="com.example.agile.ui.akun.akunFragment"
+        android:label="Akun"
+        tools:layout="@layout/fragment_akun" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.agile.ui.notif.notifFragment"
+        android:label="Notifikasi"
+        tools:layout="@layout/fragment_notif" />
+
+    <fragment
+        android:id="@+id/navigation_riwayat"
+        android:name="com.example.agile.ui.riwayat.riwayatFragment"
+        android:label="Riwayat"
+        tools:layout="@layout/fragment_riwayat" />
+</navigation>

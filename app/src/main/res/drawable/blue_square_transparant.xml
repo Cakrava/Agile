@@ -1,0 +1,21 @@
+<!-- transparent_dark_rounded.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp" />
+            <solid android:color="#332AB4F7" /> <!-- Darker transparent when pressed -->
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp" />
+            <solid android:color="#332AB4F7" /> <!-- Darker transparent when focused -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp" />
+            <solid android:color="#662AB4F7" /> <!-- Default color -->
+        </shape>
+    </item>
+</selector>
