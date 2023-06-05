@@ -1,6 +1,7 @@
 package com.example.agile
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,37 +52,28 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Nomor anda sudah terverifikasi!", Toast.LENGTH_SHORT).show()
         }
 
+//------------membuka aktivity kota nelpon-----------
+        val btnCall=findViewById<Button>(R.id.btn_call)
+        btnCall.setOnClickListener {
+            val intent = Intent(this, activity_kuota_call::class.java)
+            startActivity(intent)
+        }
+//        --------------ini embuka aktivity kuota internet------
+        val btnGB=findViewById<Button>(R.id.btn_gb)
+        btnGB.setOnClickListener {
+            val intent = Intent(this, activity_kuota_internet::class.java)
+            startActivity(intent)
+        }
 
+//        -------ini membuka aktivity pulsa-----------
+        val btnPulsa=findViewById<Button>(R.id.btn_pulsa)
+        btnPulsa.setOnClickListener {
+            val intent = Intent(this, activity_pulsa::class.java)
+            startActivity(intent)
+        }
 //        -----------------ini batas akhir---------
 
     }
 }
 //---------------------kelas fragmen home-----------------------------
-
-class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val view = binding.root
-
-        // Set click listener for btn_call
-        binding.btnCall.setOnClickListener {
-            Toast.makeText(requireContext(), "ini adalah percobaan", Toast.LENGTH_SHORT).show()
-        }
-
-        return view
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-}
 

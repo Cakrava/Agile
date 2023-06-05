@@ -848,6 +848,17 @@
 
         </RelativeLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="Tidak ada notifikasi lainnya"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+            </LinearLayout>
 
     </LinearLayout>
 

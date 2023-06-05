@@ -15,6 +15,14 @@
             android:name=".activity_pulsa"
             android:exported="false" />
         <activity
+            android:name=".activity_kuota_internet"
+            android:exported="false"
+            android:label="Kuota Internet" />
+        <activity
+            android:name=".activity_kuota_call"
+            android:exported="false"
+            android:label="Kuota Nelpon" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
