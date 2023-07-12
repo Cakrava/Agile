@@ -3,6 +3,7 @@ package com.example.agile
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.agile.databinding.ActivityMainBinding
 import com.example.agile.databinding.FragmentHomeBinding
+import com.example.agile.util.pref
 
 
 class MainActivity : AppCompatActivity() {
@@ -44,6 +46,29 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        //unutk loign
+        navView.setupWithNavController(navController)
+        navView.setOnNavigationItemSelectedListener { item ->
+            if (item.itemId == R.id.navigation_akun) {
+                val s = pref(this)
+                if (s.getISlogin()) {
+                    Log.d("TAG", "SUDAH LOGIN")
+                } else {
+                    //startActivity(Intent(this,LoginActivity::class.java))
+                    startActivity(Intent(this, ActivityLogin::class.java))
+                    Log.d("TAG", "Belum Login pindah ke hal login")
+                }
+                true
+            } else {
+                Log.d("TAG", "onCreate yg Lain" + item.itemId)
+                navController.navigate(item.itemId)
+                true
+            }
+        }
+
+
+
+
 //        ---------------------------------Taruh kode tambahan di bawah--------------------------------------
 
 //------------ini adalah toas untuk nomor-----------------

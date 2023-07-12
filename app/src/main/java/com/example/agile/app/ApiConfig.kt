@@ -1,6 +1,6 @@
 package com.example.agile.app
 import com.example.agile.app.ApiService
-import com.example.latihan_api.util.Config
+import com.example.agile.util.Config
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

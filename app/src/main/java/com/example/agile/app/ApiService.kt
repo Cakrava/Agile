@@ -9,13 +9,6 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
-
-    @FormUrlEncoded
-    @POST("tblProduk/save")
-    fun saveBarang(
-        @Body data: RiwayatModel
-    ): Call<ResponseModel>
-
-    @GET("barang")
-    fun getBarang(): Call<ResponseModel>
+    @GET("riwayat")
+    fun getRiwayat(): Call<ResponseModel>
 }

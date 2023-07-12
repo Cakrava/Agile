@@ -18,6 +18,7 @@ class AdapterRiwayat (var activity: Activity, var data: ArrayList<RiwayatModel>)
         val tvkategori = view.findViewById<TextView>(R.id.tvkategori)
         val tvtanggal = view.findViewById<TextView> (R.id.tvtanggal)
       val tvkuota = view.findViewById<TextView> (R.id.tvkuota)
+        val tvstatus = view.findViewById<TextView> (R.id.tvstatus)
     }
 
     lateinit var context: Context
@@ -34,8 +35,8 @@ class AdapterRiwayat (var activity: Activity, var data: ArrayList<RiwayatModel>)
         holder.tvharga.text = a.harga
         holder.tvkategori.text = a.kategori
         holder.tvtanggal.text=a.tanggal
+        holder.tvstatus.text=a.status
         holder.tvkuota.text=a.kuota
-
     }
 
     override fun getItemCount(): Int {

@@ -6,6 +6,7 @@ class RiwayatModel {
     var kuota =""
     var tanggal =""
     var harga =""
+    var status =""
     var create_at =""
     var update_at =""
 }

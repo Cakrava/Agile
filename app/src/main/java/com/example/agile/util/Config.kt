@@ -1,5 +1,5 @@
-package com.example.latihan_api.util
+package com.example.agile.util
 
 object Config {
-    const val baseurl = "http://192.168.191.245/laravel_1/public/"
+    const val baseurl = "http://192.168.137.6/laravel_1/public/"
 }

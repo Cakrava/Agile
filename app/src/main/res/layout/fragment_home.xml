@@ -63,11 +63,12 @@
                     android:layout_height="@dimen/_15sdp"
                     android:background="@drawable/rounded_square">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/btn_komunitas"
                         android:layout_width="@dimen/_10sdp"
                         android:layout_height="@dimen/_10sdp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/i_orang"
+                        android:background="@drawable/i_orang"
                         android:tint="@color/biru" />
                 </RelativeLayout>
             </LinearLayout>
